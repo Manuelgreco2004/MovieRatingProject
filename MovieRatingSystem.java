@@ -1,10 +1,13 @@
 import java.util.Scanner;
 
+
+// Main Class
 public class MovieRatingSystem {
     public static void main(String[] args) {
+        // Use only one scanner for all inputs; name, movies, numbers, genre.
         Scanner scanner = new Scanner(System.in);
 
-        // Step 1: User Input
+        // Step 1: Implement User Input Handling
         System.out.print("Enter your name: ");
         String userName = scanner.nextLine();
 
@@ -97,6 +100,8 @@ public class MovieRatingSystem {
         System.out.print("\nEnter your favorite movie genre (Action, Comedy, Horror, Drama, Sci-Fi): ");
         String genre = scanner.nextLine().trim();
 
+
+        // Switch statement providing response depending choice
         switch (genre.toLowerCase()) {
             case "action":
                 System.out.println("You love excitement and thrills!");
@@ -122,9 +127,9 @@ public class MovieRatingSystem {
         // Step 8: Use the Conditional Operator to Display a Movie Recommendation
 
         // Horror Recommendation
-        String horror = genre.equalsIgnoreCase("Horror") || genre.equalsIgnoreCase("Horror") 
+        String horror = genre.equalsIgnoreCase("Horror") || genre.equalsIgnoreCase("SciFi") 
                 ? "It" 
-                : "Crawl";
+                : "War Machine";
         System.out.println("Recommended Movie for you: " + horror);
 
 
